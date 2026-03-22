@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог | Gala Decors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">Gala Decors</a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Главная</a></li>
+                    <li><a href="catalog.html" class="nav-link active">Каталог</a></li>
+                    <li><a href="about.html" class="nav-link">Обо мне</a></li>
+                    <li><a href="order.html" class="nav-link">Заказ</a></li>
+                </ul>
+            </nav>
+            <div class="header-contacts">
+                <a href="tel:+380503236633" class="contact-link" title="Телефон"><i class="fa-solid fa-phone"></i></a>
+                <a href="tg://resolve?domain=username" target="_blank" class="contact-link" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
+                <a href="https://instagram.com/gala_decors" target="_blank" class="contact-link" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/380503236633" target="_blank" class="contact-link" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="mailto:gala.decors55@gmail.com" class="contact-link" title="Email"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+            <button class="menu-toggle" aria-label="Открыть меню">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main style="padding-top: 80px;">
+        <section class="container animate-on-scroll fade-up" style="padding-top: 40px; padding-bottom: 100px;">
+            <h1 class="main-title">Декор для Вас:</h1>
+            
+            <div class="catalog-nav">
+                <button class="filter-btn active" data-filter="all">Все работы</button>
+                <button class="filter-btn" data-filter="topotushki">Топотушки</button>
+                <button class="filter-btn" data-filter="wreaths">Веночки</button>
+                <button class="filter-btn" data-filter="bowls">Чаши</button>
+                <button class="filter-btn" data-filter="birds">Птицы</button>
+                <button class="filter-btn" data-filter="hedgehogs">Ёжики</button>
+                <button class="filter-btn" data-filter="babki">Бабки</button>
+                <button class="filter-btn" data-filter="mice">Мышки</button>
+                <button class="filter-btn" data-filter="frogs">Лягушки</button>
+            </div>
+
+            <div class="product-grid catalog-grid" style="margin-top: 40px;" id="dynamic-catalog">
+                <!-- Контент загружается динамически через JS из текстовых файлов в папках images/ -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">Gala Decors</a>
+                <p class="footer-text">Декор для Вас, созданный рукам с душой и любовью к деталям.</p>
+            </div>
+            <div class="footer-links">
+                <h4 class="footer-title">Навигация</h4>
+                <ul>
+                    <li><a href="catalog.html"><i class="fa-solid fa-angle-right"></i> Каталог</a></li>
+                    <li><a href="about.html"><i class="fa-solid fa-angle-right"></i> Обо мне</a></li>
+                    <li><a href="order.html"><i class="fa-solid fa-angle-right"></i> Заказ</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4 class="footer-title">Контакты</h4>
+                <p><a href="tel:+380503236633"><i class="fa-solid fa-phone"></i> +380 (50) 323-66-33</a></p>
+                <p><a href="mailto:gala.decors55@gmail.com"><i class="fa-solid fa-envelope"></i> gala.decors55@gmail.com</a></p>
+                <div class="social-links">
+                    <a href="https://instagram.com/gala_decors" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                    <a href="https://www.facebook.com/checkpoint/1501092823525282/?next=https%3A%2F%2Fwww.facebook.com%2F&__req=9" target="_blank" rel="noopener"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>&copy; 2026 Gala Decors. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

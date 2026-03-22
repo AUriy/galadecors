@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обо мне | Gala Decors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        @media (max-width: 768px) {
+            .about-grid { grid-template-columns: 1fr; }
+        }
+        .about-image {
+            background: var(--secondary-color) url('images/hero-bg.png') center/cover no-repeat;
+            aspect-ratio: 4/5;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">Gala Decors</a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Главная</a></li>
+                    <li><a href="catalog.html" class="nav-link">Каталог</a></li>
+                    <li><a href="about.html" class="nav-link active">Обо мне</a></li>
+                    <li><a href="order.html" class="nav-link">Заказ</a></li>
+                </ul>
+            </nav>
+            <div class="header-contacts">
+                <a href="tel:+380503236633" class="contact-link" title="Телефон"><i class="fa-solid fa-phone"></i></a>
+                <a href="tg://resolve?domain=username" target="_blank" class="contact-link" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
+                <a href="https://instagram.com/gala_decors" target="_blank" class="contact-link" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/380503236633" target="_blank" class="contact-link" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="mailto:gala.decors55@gmail.com" class="contact-link" title="Email"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+            <button class="menu-toggle" aria-label="Открыть меню">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main style="padding-top: 120px;">
+        <section class="section container animate-on-scroll fade-up">
+            <div class="about-grid">
+                <div class="about-images-collage" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                    <div style="grid-column: span 2; background: url('images/topotushki/1.jpg') center/cover no-repeat; border-radius: 12px; min-height: 300px;"></div>
+                    <div style="background: url('images/wreaths/2.jpg') center/cover no-repeat; border-radius: 12px; aspect-ratio: 1;"></div>
+                    <div style="background: url('images/birds/2.jpg') center/cover no-repeat; border-radius: 12px; aspect-ratio: 1;"></div>
+                </div>
+                <div class="about-text">
+                    <span class="subtitle">Философия бренда</span>
+                    <h1 class="main-title" style="font-size: 3rem;">Душа в каждой детали</h1>
+                    <p style="margin-bottom: 20px; font-size: 1.1rem; color: var(--light-text);">
+                        Меня зовут Галина. Добро пожаловать в Gala Decors! Здесь искренняя любовь к прекрасному превращается в осязаемые предметы интерьера. Главный источник моего вдохновения — это сама природа, ее первозданная красота и естественность.
+                    </p>
+                    <p style="margin-bottom: 20px;">
+                        Я создаю каждый предмет исключительно из натуральных материалов — сосновых шишек, лесного мха, натуральной хвои, дерева и джута. Именно природные элементы обладают уникальной энергетикой, которая позволяет вдохнуть в декор настоящую жизнь и согреть любое пространство.
+                    </p>
+                    <p style="margin-bottom: 20px;">
+                        Ручная работа требует огромного внимания к мельчайшим деталям, но только так рождаются эксклюзивные и по-настоящему живые вещи. Моя главная миссия — с помощью натурального природного декора привнести в ваш дом гармонию, неповторимый уют и элегантную теплоту, которая будет радовать вас долгие годы.
+                    </p>
+                    <a href="catalog.html" class="btn btn-hero" style="margin-top: 20px;"><i class="fa-solid fa-book-open"></i> Перейти к выбору</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">Gala Decors</a>
+                <p class="footer-text">Декор для Вас, созданный рукам с душой и любовью к деталям.</p>
+            </div>
+            <div class="footer-links">
+                <h4 class="footer-title">Навигация</h4>
+                <ul>
+                    <li><a href="catalog.html"><i class="fa-solid fa-angle-right"></i> Каталог</a></li>
+                    <li><a href="about.html"><i class="fa-solid fa-angle-right"></i> Обо мне</a></li>
+                    <li><a href="order.html"><i class="fa-solid fa-angle-right"></i> Заказ</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4 class="footer-title">Контакты</h4>
+                <p><a href="tel:+380503236633"><i class="fa-solid fa-phone"></i> +380 (50) 323-66-33</a></p>
+                <p><a href="mailto:gala.decors55@gmail.com"><i class="fa-solid fa-envelope"></i> gala.decors55@gmail.com</a></p>
+                <div class="social-links">
+                    <a href="https://instagram.com/gala_decors" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                    <a href="https://www.facebook.com/checkpoint/1501092823525282/?next=https%3A%2F%2Fwww.facebook.com%2F&__req=9" target="_blank" rel="noopener"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>&copy; 2026 Gala Decors. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
