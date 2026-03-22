@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const filterBtns = document.querySelectorAll('.filter-btn');
     
     if (catalogGrid) {
-        const categories = ['topotushki', 'wreaths', 'bowls', 'birds', 'hedgehogs', 'babki', 'mice', 'frogs'];
+        const categories = ['topotushki', 'wreaths', 'bowls', 'birds', 'hedgehogs', 'babki', 'mice', 'frogs', 'frames', 'cats', 'dogs', 'bears', 'other'];
         let hasLoadedAny = false;
         
         Promise.all(categories.map(category => {
@@ -122,5 +122,45 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             });
         }
+    }
+
+    // Dynamic favorites loading on homepage
+    const favoritesGrid = document.getElementById('favorites-grid');
+    if (favoritesGrid) {
+        fetch('images/favorites/favorites.txt')
+            .then(res => {
+                if (!res.ok) throw new Error('Not found');
+                return res.text();
+            })
+            .then(text => {
+                const lines = text.trim().split('\n');
+                lines.forEach(line => {
+                    if (!line.trim()) return;
+                    const parts = line.split('\t');
+                    if (parts.length >= 3) {
+                        const filename = parts[0];
+                        const name = parts[1];
+                        const price = parts[2];
+                        
+                        const article = document.createElement('article');
+                        article.className = 'product-card animate-on-scroll fade-up is-visible';
+                        
+                        article.innerHTML = `
+                            <div class="product-image-wrapper">
+                                <div class="product-placeholder" style="background: url('images/favorites/${filename}') center/cover;"></div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">${name}</h3>
+                                <span class="product-price">${price}</span>
+                            </div>
+                        `;
+                        favoritesGrid.appendChild(article);
+                    }
+                });
+            })
+            .catch(err => {
+                // Ignore or show fallback message if favorites don't load
+                console.log('Favorites empty or not found:', err);
+            });
     }
 });
